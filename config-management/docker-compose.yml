@@ -1,0 +1,20 @@
+services:
+  consul:
+    build: ./consul
+    image: consul:1.15
+    ports:
+      - "8500:8500"
+      - "8600:8600/udp"
+    volumes:
+      - consul-data:/consul/data
+
+  app:
+    build: ./app
+    image: node:22
+    ports:
+      - "3000:3000"
+    depends_on:
+      - consul
+
+volumes:
+  consul-data:
