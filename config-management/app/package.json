@@ -1,5 +1,5 @@
 {
-    "name": "config-management",
+    "name": "config-management-app",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -7,7 +7,7 @@
       "start": "node index.js"
     },
     "dependencies": {
-      "consul": "^0.38.0",
+      "consul": "^0.34.1",
       "express": "^4.17.1"
     }
   }
