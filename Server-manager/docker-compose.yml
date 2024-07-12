@@ -1,0 +1,13 @@
+
+services:
+  server:
+    build:
+      context: ./server
+    ports:
+      - "3000:3000"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
