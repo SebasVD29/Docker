@@ -1,0 +1,9 @@
+services:
+  nodejs-server:
+    build:
+      context: ./nodejs_server
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./nodejs_server:/usr/src/app   # Montar la carpeta del servidor
+      - ./proyectos:/usr/src/app/proyectos  # Montar la carpeta de proyectos HTML/JavaScript
